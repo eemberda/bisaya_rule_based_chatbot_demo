@@ -9,7 +9,7 @@ const BOT_MSGS = [
 "Mao na ang My La Salle system. Mamahimo nimo ning ma activate pinaagi sa pag bisita sa https://my.dlsu.edu.ph/create_account.asp.",
 "Unsa ang wala nimo nahibal-an?",
 "Mamahimung sundon ang proseso sa pag bayad nga anaa dinhi nga website: https://www.dlsu.edu.ph/offices/accounting/official-payment-channels/",
-"Para ma activate imong MLS, palihug sa pagsunod sa maong proseso: <br>Una, pag pa evaluate sa Academic Programming Officer sa imong college <br> Ikaduha, pag Cleared ka na, maka dawat ka ug email para sa activation sa imong MLS account ug ang petsa kung kanus-a ka maka buhat sa imong online enrollment<br> Ikatulo, pag-Enroll online gamit ang imong animo.sys human sa activation sa imong MLS (gawas kung ang imong enrollment pinaagi sa gform submission sama sa WCE, OCE, Defense etc)<br>"];
+"Para ma activate imong MLS, palihug sa pagsunod sa maong proseso: <br><br>Una, pag pa evaluate sa Academic Programming Officer sa imong college <br><br> Ikaduha, pag Cleared ka na, maka dawat ka ug email para sa activation sa imong MLS account ug ang petsa kung kanus-a ka maka buhat sa imong online enrollment<br><br> Ikatulo, pag-Enroll online gamit ang imong animo.sys human sa activation sa imong MLS (gawas kung ang imong enrollment pinaagi sa gform submission sama sa WCE, OCE, Defense etc)<br>"];
 
 const message_index={
   RETURNEE_GREET:0,
@@ -26,7 +26,7 @@ const returnee_patterns = {
   PATTERN_MLS:/nsa|MLS/gi,
   PATTERN_QUESTION:/[Ww]a|[Aa]mbot|ka|lang|ra/i,
   PATTERN_PAY:/bayad/i,
-  PATTERN_CREATE_MLS:/\[Ww]a|MLS|la|salle|account/i
+  PATTERN_CREATE_MLS:/account/i
 }
 
 
@@ -79,13 +79,13 @@ function botResponse(msgText) {
   if(text.match(returnee_patterns.PATTERN_PROCESS)!==null){
       botMsgText=BOT_MSGS[message_index.RETURNEE_PROCESS];
   }else if(text.match(returnee_patterns.PATTERN_CREATE_MLS)!==null){
-      botMsgText=BOT_MSGS[message_index.RETURNEE_MLS];
+      botMsgText=BOT_MSGS[message_index.RETURNEE_CREATE_MLS];
   }else if(text.match(returnee_patterns.PATTERN_PAY)!==null){
       botMsgText=BOT_MSGS[message_index.RETURNEE_PAY];
   }else if(text.match(returnee_patterns.PATTERN_QUESTION)!==null){
       botMsgText=BOT_MSGS[message_index.RETURNEE_QUESTION];
   }else if(text.match(returnee_patterns.PATTERN_MLS)!==null){
-      botMsgText=BOT_MSGS[message_index.RETURNEE_CREATE_MLS];
+      botMsgText=BOT_MSGS[message_index.RETURNEE_MLS];
   }
   // if(result!=="")
   //   botMsgText = "Welcome returnee! Salamat sa pag pangutana. Ang proseso ma basa <a href=\"https://www.dlsu.edu.ph/wp-content/uploads/pdf/registrar/schedules/enroll_gs.pdf\">dinhi nga dokumento</a> . Mas maayo kung na activate na ang imong MLS account para ma sayon sundon ang proseso.";
