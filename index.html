@@ -27,12 +27,16 @@
 
         <div class="msg-bubble">
           <div class="msg-info">
-            <div class="msg-info-name">BOT</div>
-            <div class="msg-info-time">12:45</div>
+            <div class="msg-info-name">DLSU Enrollment BOT</div>
+            <div class="msg-info-time" id="msg-info-time"><script>
+	var date = new Date();
+	var current_time = date.getHours()+":"+date.getMinutes()+":"+ date.getSeconds();
+	document.getElementById("msg-info-time").innerHTML = current_time;
+</script></div>
           </div>
 
           <div class="msg-text">
-            Hi, welcome to SimpleChat! Go ahead and send me a message. 😄
+            Maayong adlaw! Kamusta ka? Tabangan ka nako para maka enroll sa doctoral diri sa De La Salle University. Pwede ko mangutana kung bag-o ba ka nga estudyante, continuing, o returnee? 😄
           </div>
         </div>
       </div>

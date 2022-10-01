@@ -86,6 +86,8 @@ function botResponse(msgText) {
       botMsgText=BOT_MSGS[message_index.RETURNEE_QUESTION];
   }else if(text.match(returnee_patterns.PATTERN_MLS)!==null){
       botMsgText=BOT_MSGS[message_index.RETURNEE_MLS];
+  }else{
+      botMsgText=BOT_MSGS[message_index.RETURNEE_NOT_UNDERSTAND];
   }
   // if(result!=="")
   //   botMsgText = "Welcome returnee! Salamat sa pag pangutana. Ang proseso ma basa <a href=\"https://www.dlsu.edu.ph/wp-content/uploads/pdf/registrar/schedules/enroll_gs.pdf\">dinhi nga dokumento</a> . Mas maayo kung na activate na ang imong MLS account para ma sayon sundon ang proseso.";
